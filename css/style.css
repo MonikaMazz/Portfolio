@@ -115,6 +115,7 @@ nav #navbar ul li:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 #lead .lead_description {
@@ -392,6 +393,29 @@ nav #navbar ul li:hover {
   color: white;
   text-align: center;
   padding-top: 10px;
+}
+
+#contact p {
+  padding: 10px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  color: #aaa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact i {
+  font-size: 40px;
+}
+
+#contact a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  margin-left: 20px;
 }
 
 #contact input,
