@@ -1,462 +1,474 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
+@keyframes animation-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 
+@keyframes animation-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  display: block;
 }
 
 nav {
-    width: 100%;
-    height: 50px;
-    opacity: 0.8;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    background-color: black;
-    z-index: 500;
+  width: 100%;
+  height: 50px;
+  opacity: 0.8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  z-index: 500;
 }
 
 nav #logo {
-    font-family: 'Limelight', cursive;
-    font-size: 30px;
-    color: white;
-    padding: 10px;
-    float: left;
-
+  font-family: "Limelight", cursive;
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+  float: left;
 }
 
 nav #navbar {
-    float: right;
+  float: right;
 }
 
 nav #navbar ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 15px 10px;
-    color: white;
+  list-style-type: none;
+  display: inline-block;
+  padding: 15px 10px;
+  color: white;
 }
 
 nav #navbar ul li a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .active {
-    background-color: rgb(1, 78, 78);
-
+  background-color: rgb(1, 78, 78);
 }
 
 nav #navbar ul li:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* HAMBURGER MENU */
 
 .menu-icon {
-    position: absolute;
-    top: 3px;
-    right: 3px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-    display: none;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  display: none;
 }
 
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 
 .change .bar2 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /* LEAD */
 
 #lead {
-    width: 100%;
-    background: url("../images/clouds.png");
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: soft-light;
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  width: 100%;
+  background: url("../images/clouds.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 #lead .lead_description {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 80vh;
-    padding-top: 100px;
-    color: white;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+  padding-top: 100px;
+  color: white;
 }
 
 #lead .lead_description h1 {
-    font-size: 4em;
-    text-shadow: 3px 3px #404040;
+  font-size: 4em;
+  text-shadow: 3px 3px #404040;
+  animation: animation-left 1s linear 1s;
 }
 
 #lead .lead_description p {
-    font-size: 2em;
-    padding: 20px;
-}
-
-#lead div {
-    width: 200px;
-}
-
-#lead h1 {
-    /* padding-top: 30vh; */
+  font-size: 2em;
+  padding: 20px;
+  animation: animation-left 1s linear 1s;
 }
 
 #lead div button {
-    width: 250px;
-    height: 100px;
-    box-sizing: border-box;
-    background-color: #104869af;
-    border: 0;
-    border-radius: 10px;
-    color: white;
-    font-size: 40px;
-    padding: 10px;
+  width: 250px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: #104869af;
+  transition: 1000ms;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+  animation: animation-right 1s linear 1s;
 }
 
 #lead div button a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+}
+
+#lead div button:hover {
+  background-color: #0a2e42af;
+  font-size: 40px;
+  transition: 1000ms;
 }
 
 #about {
-    width: 100%;
-    background-color: white;
-    clear: both;
+  width: 100%;
+  background-color: white;
+  clear: both;
 }
 
 #about .about_description {
-    padding-top: 50px;
-    text-align: justify;
+  padding-top: 50px;
+  text-align: justify;
 }
 
 #about #container {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
 }
 
 #about .person {
-    padding: 40px 0;
-    width: 500px;
-    height: 420px;
+  padding: 40px 0;
+  width: 500px;
+  height: 420px;
 }
 
 #about .person img {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 
 #about .person h2 {
-    text-align: center;
-    padding-top: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
 
 #about .person p {
-    text-align: center;
-    padding: 10px;
-    max-height: 250px;
-    text-overflow: clip;
+  text-align: center;
+  padding: 10px;
+  max-height: 250px;
+  text-overflow: clip;
 }
 
 #about .person .icons {
-    width: 50%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    justify-content: space-between;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 #about .person .icons i {
-    font-size: 40px;
-    padding: 5px;
-
+  font-size: 40px;
+  padding: 5px;
 }
 
 #about .person .icons a {
-    color: black;
+  color: black;
 }
 
 #about .person .icons .fa-linkedin:hover {
-    color: rgb(0, 99, 212);
+  color: rgb(0, 99, 212);
 }
 
 #about .person .icons .fa-github:hover {
-    color: rgb(107, 8, 138);
+  color: rgb(107, 8, 138);
 }
 
 #about .person .icons .fa-home:hover {
-    color: green;
+  color: green;
 }
 
 #technologies {
-    width: 100%;
-    background-color: rgb(102, 102, 102);
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-size: 1.4em;
+  width: 100%;
+  background-color: rgb(102, 102, 102);
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 1.4em;
 }
 
 #technologies .container {
-    width: 90%;
-    text-align: center;
-    color: white;
-    margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
 }
 
 #technologies .icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #technologies .icons img {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
 
 #projects {
-    width: 100%;
-    background-image: url("../images/projects-bg.jpg");
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  background-image: url("../images/projects-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 #projects #overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
 }
 
 #projects #overlay p {
-    text-align: center;
-    color: white;
-    font-size: 1.4em;
-    padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-size: 1.4em;
+  padding-top: 50px;
 }
 
 #projects #gallery {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
 }
 
 #projects #gallery img {
-    margin: 20px;
-    width: 300px;
-    height: 160px;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.733);
-
+  margin: 20px;
+  width: 300px;
+  height: 160px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.733);
 }
 
 #lightbox {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.733);
-    position: fixed;
-    top: 0px;
-    left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.733);
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 
 #lightbox #lightbox-items {
-    width: 60%;
-    margin: 30px auto;
-    border: 5px solid white;
-    position: relative;
-    top: 20px;
+  width: 60%;
+  margin: 30px auto;
+  border: 5px solid white;
+  position: relative;
+  top: 20px;
 }
 
 #lightbox #lightbox-items #close {
-    width: 100px;
-    height: 50px;
-    border-bottom-left-radius: 20px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: rgba(255, 255, 255, 0.61);
-    text-align: center;
-    font-size: 45px;
+  width: 100px;
+  height: 50px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.61);
+  text-align: center;
+  font-size: 45px;
 }
 
 #lightbox #lightbox-items #next {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    border-top-left-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.61);
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    font-size: 45px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-top-left-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.61);
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  font-size: 45px;
 }
 
 #lightbox #lightbox-items #prev {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    border-top-right-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.61);
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    font-size: 45px;
-
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-top-right-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.61);
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  font-size: 45px;
 }
 
 #lightbox #lightbox-items img {
-    width: 100%;
-    max-height: 600px;
+  width: 100%;
+  max-height: 600px;
 }
 
 #lightbox #lightbox-items #text {
-    background-color: black;
-    color: white;
-    padding-bottom: 20px;
-    text-align: center;
+  background-color: black;
+  color: white;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 #lightbox #lightbox-items #text p a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(0, 23, 65);
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    border: 1px solid white;
-    font-size: 24px;
-    margin: 10px auto;
-
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(0, 23, 65);
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-size: 24px;
+  margin: 10px auto;
 }
 
 #contact {
-    background-color: rgb(102, 102, 102);
-    padding: 15px;
+  background-color: rgb(102, 102, 102);
+  padding: 15px;
 }
 
 #contact h2 {
-    color: white;
-    text-align: center;
-    padding-top: 10px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
 }
 
 #contact input,
 #contact textarea {
-    display: block;
-    margin: 0 auto;
-    background: rgb(152, 152, 152);
-    border: 0;
-    padding: 3px;
-    color: white;
-    width: 500px;
+  display: block;
+  margin: 0 auto;
+  background: rgb(152, 152, 152);
+  border: 0;
+  padding: 3px;
+  color: white;
+  width: 500px;
 }
 
 #contact label {
-    text-align: center;
-    color: white;
-    padding: 5px;
-    display: block;
-    margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
 }
 
 #contact #submit {
-    width: 506px;
-    height: 40px;
-    margin: 5px auto;
-    background-color: rgb(1, 78, 78);
-
-
+  width: 506px;
+  height: 40px;
+  margin: 5px auto;
+  background-color: rgb(1, 78, 78);
 }
 
 .d-none {
-    display: none;
+  display: none;
 }
 
 footer {
-    background-color: black;
-    color: white;
-    padding: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
 }
 
 footer p {
-    text-align: center
+  text-align: center;
 }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 560px) {
+  .bar1,
+  .bar2,
+  .bar3 {
+    display: block;
+  }
 
-    .bar1,
-    .bar2,
-    .bar3 {
-        display: block;
-    }
+  nav #navbar ul li {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.733);
+  }
 
-    nav #navbar ul li {
-        display: none;
-        background-color: rgba(0, 0, 0, 0.733);
-    }
+  #contact {
+    padding: 5px 0px;
+  }
 
-    #contact {
-        padding: 5px 0px;
-    }
+  #contact form input {
+    width: 100%;
+    margin: 0px;
+    padding: 3px 0px;
+  }
 
-    #contact form input {
-        width: 100%;
-        margin: 0px;
-        padding: 3px 0px;
-    }
+  #contact form textarea {
+    width: 100%;
+    margin: 0px;
+    padding: 3px 0px;
+  }
 
-    #contact form textarea {
-        width: 100%;
-        margin: 0px;
-        padding: 3px 0px;
-    }
+  #contact #submit {
+    width: 100%;
+  }
 
-    #contact #submit {
-        width: 100%;
-    }
-
-    #lightbox #lightbox-items {
-        width: 90%;
-        border: 3px solid white;
-    }
+  #lightbox #lightbox-items {
+    width: 90%;
+    border: 3px solid white;
+  }
 }
