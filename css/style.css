@@ -106,11 +106,7 @@ nav #navbar ul li:hover {
 
 #lead {
   width: 100%;
-  /* background: url("../images/clouds.png"); */
   background-color: white;
-  /* background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light; */
   z-index: -1;
   display: flex;
   align-items: center;
@@ -119,7 +115,7 @@ nav #navbar ul li:hover {
   overflow-x: hidden;
 }
 
-#lead .circle {
+#lead .bubbles {
   width: 100px;
   height: 200px;
   background-color: rgb(0, 0, 0, 0.5);
@@ -140,7 +136,7 @@ nav #navbar ul li:hover {
   text-align: center;
   height: 80vh;
   padding-top: 100px;
-  color: rgb(144, 153, 161);
+  color: rgb(165, 178, 190);
 }
 
 #lead .lead_description h1 {
