@@ -106,16 +106,29 @@ nav #navbar ul li:hover {
 
 #lead {
   width: 100%;
-  background: url("../images/clouds.png");
-  background-size: cover;
+  /* background: url("../images/clouds.png"); */
+  background-color: white;
+  /* background-size: cover;
   background-position: center;
-  background-blend-mode: soft-light;
+  background-blend-mode: soft-light; */
   z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow-x: hidden;
+}
+
+#lead .circle {
+  width: 100px;
+  height: 200px;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: 1;
 }
 
 #lead .lead_description {
@@ -127,7 +140,7 @@ nav #navbar ul li:hover {
   text-align: center;
   height: 80vh;
   padding-top: 100px;
-  color: white;
+  color: rgb(144, 153, 161);
 }
 
 #lead .lead_description h1 {
