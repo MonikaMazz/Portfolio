@@ -199,7 +199,7 @@ nav #navbar ul li:hover {
 #about .person {
   padding: 40px 0;
   width: 500px;
-  height: 420px;
+  /* height: 420px; */
 }
 
 #about .person img {
