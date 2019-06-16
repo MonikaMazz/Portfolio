@@ -115,18 +115,6 @@ nav #navbar ul li:hover {
   overflow-x: hidden;
 }
 
-#lead .bubbles {
-  width: 100px;
-  height: 200px;
-  background-color: rgb(0, 0, 0, 0.5);
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-  position: absolute;
-  top: 50%;
-  left: 0px;
-  z-index: 1;
-}
-
 #lead .lead_description {
   width: 80%;
   display: flex;
@@ -169,11 +157,19 @@ nav #navbar ul li:hover {
   text-decoration: none;
   color: white;
 }
-
 #lead div button:hover {
   background-color: #0a2e42af;
   font-size: 40px;
   transition: 1000ms;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  overflow-x: hidden;
 }
 
 #about {
@@ -199,7 +195,6 @@ nav #navbar ul li:hover {
 #about .person {
   padding: 40px 0;
   width: 500px;
-  /* height: 420px; */
 }
 
 #about .person img {

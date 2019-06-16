@@ -1,6 +1,22 @@
 $(document).ready(function () {
 
-    var bubbles = document.getElementsByClassName(bubbles);
+    //  CIRCLES
+
+    var circleNumber = 10 + Math.random() * 10;
+    var lead = document.getElementById("lead");
+
+    for (i = 0; i < circleNumber; i++) {
+        let positionTop = Math.random() * 100;
+        let positionLeft = Math.random() * 90;
+        let circleSize = parseInt(1 + Math.random() * 100);
+        let circle = document.createElement('div');
+        circle.className = "circle";
+        circle.style.left = positionLeft + "%";
+        circle.style.top = positionTop + "vh";
+        circle.style.width = circleSize + "px";
+        circle.style.height = circleSize + "px";
+        lead.appendChild(circle);
+    }
 
     // hamburger menu
     $(".menu-icon").click(function () {
