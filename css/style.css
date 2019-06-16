@@ -124,32 +124,35 @@ nav #navbar ul li:hover {
   text-align: center;
   height: 80vh;
   padding-top: 100px;
-  color: rgb(165, 178, 190);
+  color: rgb(233, 230, 230);
   z-index: 50;
 }
 
 #lead .lead_description h1 {
   font-size: 4em;
-  text-shadow: 3px 3px #404040;
+  text-shadow: 3px 3px 3px #404040;
   animation: animation-left 1s linear 0s;
 }
 
 #lead .lead_description p {
   font-size: 2em;
   padding: 20px;
+  text-shadow: 2px 2px 2px #797878;
   animation: animation-left 1s linear 0s;
 }
 
 #lead div button {
   width: 250px;
-  height: 100px;
+  height: 80px;
   box-sizing: border-box;
-  background-color: #104869af;
+  box-shadow: 3px 3px 3px #797979;
+  background-color: #10486994;
   transition: 1000ms;
   border: 0;
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
   font-size: 35px;
+  margin-top: 20px;
   padding: 10px;
   animation: animation-right 1s linear 0s;
 }

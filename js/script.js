@@ -16,7 +16,7 @@ $(document).ready(function () {
         let circle = document.createElement('div');
         // setting className - defined in css
         circle.className = "circle";
-        // setting position, width, height and opacity
+        // setting position, width, height and colors
         circle.style.left = positionLeft + "%";
         circle.style.top = positionTop + "vh";
         circle.style.width = circleSize + "px";
