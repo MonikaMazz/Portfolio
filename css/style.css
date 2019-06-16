@@ -131,13 +131,13 @@ nav #navbar ul li:hover {
 #lead .lead_description h1 {
   font-size: 4em;
   text-shadow: 3px 3px #404040;
-  animation: animation-left 1s linear 1s;
+  animation: animation-left 1s linear 0s;
 }
 
 #lead .lead_description p {
   font-size: 2em;
   padding: 20px;
-  animation: animation-left 1s linear 1s;
+  animation: animation-left 1s linear 0s;
 }
 
 #lead div button {
@@ -151,7 +151,7 @@ nav #navbar ul li:hover {
   color: white;
   font-size: 35px;
   padding: 10px;
-  animation: animation-right 1s linear 1s;
+  animation: animation-right 1s linear 0s;
 }
 
 #lead div button a {

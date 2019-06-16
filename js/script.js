@@ -2,25 +2,28 @@ $(document).ready(function () {
 
     //  CIRCLES
 
-    var circleNumber = 10 + Math.random() * 10;
+    var circleNumber = 10 + Math.random() * 10; // circle number
     var lead = document.getElementById("lead");
 
     for (i = 0; i < circleNumber; i++) {
-        let positionTop = Math.random() * 100;
-        let positionLeft = Math.random() * 90;
-        let circleSize = parseInt(1 + Math.random() * 100);
-        let circleOpacity = 0.1 + Math.random() * 0.4;
+        let positionTop = Math.random() * 100; // position top
+        let positionLeft = Math.random() * 90; // position left
+        let circleSize = parseInt(1 + Math.random() * 100); // size
+        let circleOpacity = 0.1 + Math.random() * 0.4; // opacity
         let circle = document.createElement('div');
+        // setting className - defined in css
         circle.className = "circle";
+        // setting position, width, height and opacity
         circle.style.left = positionLeft + "%";
         circle.style.top = positionTop + "vh";
         circle.style.width = circleSize + "px";
         circle.style.height = circleSize + "px";
         circle.style.opacity = circleOpacity;
+        // append child to div with id lead
         lead.appendChild(circle);
-    }
+    };
 
-    // hamburger menu
+    // HAMBURGER MENU 
     $(".menu-icon").click(function () {
         $(".menu-icon").toggleClass('change');
         $("nav #navbar ul li").toggle(function () {
@@ -36,7 +39,6 @@ $(document).ready(function () {
 
     //   SCROLL
     var scrollLink = $('.scroll');
-
     // Smooth scrolling
     scrollLink.click(function (e) {
         e.preventDefault();
@@ -44,7 +46,6 @@ $(document).ready(function () {
             scrollTop: $(this.hash).offset().top
         }, 1000);
     });
-
     // Active link switching
     $(window).scroll(function () {
         var scrollbarLocation = $(this).scrollTop();
@@ -55,43 +56,40 @@ $(document).ready(function () {
                 $(this).parent().siblings().removeClass('active');
             }
         });
-
     });
-    // Kliknięcie na mały obrazek
+
+    // LIGHTBOX 
+    // Click on small img
     $("#projects #gallery img").click(function () {
-        // Wyświetlenie okienka z powiększeniem (usuwam klasę d-none)
+        // Display lightbox (delete class d-none)
         $("#lightbox").removeClass("d-none");
-        // ustalam, że zmienna imgSrc to ścieżka do klikniętego obrazka
+        // Make imgSrc is path to clicked img
         var imgSrc = $(this).attr("src");
-        // ustalam że ścieżka dużego obrazka to imgSrc
+        // Set imgSrc as path to big pic
         $("#lightbox #lightbox-items img").attr("src", imgSrc);
         var indexA = $(this).index();
         $("#lightbox #lightbox-items #text p").eq(indexA).removeClass("d-none");
-        // alert(indexA);
 
-        // Kliknięcie na "dalej"
+        // Click on next event
         $("#next").click(function () {
-
-            // Jeżeli indeks bieżącego obrazka jest ostatnim
+            // if index of actual pic is the last
             if ($("#projects #gallery img").eq(indexA).is(":last-child")) {
-                // Ustal index na 0
+                // Set index to 0
                 indexA = 0;
             }
-            // W każdym innym wypadku nowy index to index+1
+            // In any other case, set new index to index+1
             else {
                 indexA = indexA + 1
             }
-            // Ścieżka nowego obrazka z sekcji projects
+            // Path to the new img from projects section
             var imgSrc2 = $("#projects #gallery img").eq(indexA).attr("src");
-            // Wrzucenie ścieżki 
+            // Set path
             $("#lightbox #lightbox-items img").attr("src", imgSrc2);
             $("#lightbox #lightbox-items p").addClass("d-none");
             $("#lightbox #lightbox-items p").eq(indexA).removeClass("d-none");
-
         });
 
-        // Kliknięcie wstecz
-
+        // Click on back - event
         $("#prev").click(function () {
             if ($("#projects #gallery img").eq(indexA).is(":first-child")) {
                 indexA = $("#projects #gallery img:last-child").index();
@@ -103,16 +101,12 @@ $(document).ready(function () {
             $("#lightbox #lightbox-items p").addClass("d-none");
             $("#lightbox #lightbox-items p").eq(indexA).removeClass("d-none");
         });
-
     });
 
-    // Kliknięcie na "zamknij"
+    // Click on close - event
     $("#close").click(function () {
-        // Dodanie klasy d-none - lightbox się nie wyświetla   
+        // Add class d-none
         $("#lightbox").addClass("d-none");
         $("#lightbox #lightbox-items #text p").addClass("d-none");
     });
-
 });
-
-// BUBBLES
