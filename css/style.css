@@ -338,16 +338,19 @@ nav #navbar ul li:hover {
   top: 20px;
 }
 
-#lightbox #lightbox-items #close {
+#lightbox #lightbox-items .item {
+  background-color: rgba(150, 150, 150, 0.61);
+  text-align: center;
   width: 100px;
   height: 50px;
+  font-size: 45px;
+}
+
+#lightbox #lightbox-items #close {
   border-bottom-left-radius: 20px;
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: rgba(255, 255, 255, 0.61);
-  text-align: center;
-  font-size: 45px;
 }
 
 #lightbox #lightbox-items #next {
@@ -355,11 +358,6 @@ nav #navbar ul li:hover {
   bottom: 0px;
   right: 0px;
   border-top-left-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.61);
-  text-align: center;
-  width: 100px;
-  height: 50px;
-  font-size: 45px;
 }
 
 #lightbox #lightbox-items #prev {
@@ -367,11 +365,6 @@ nav #navbar ul li:hover {
   bottom: 0px;
   left: 0px;
   border-top-right-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.61);
-  text-align: center;
-  width: 100px;
-  height: 50px;
-  font-size: 45px;
 }
 
 #lightbox #lightbox-items img {
@@ -380,8 +373,8 @@ nav #navbar ul li:hover {
 }
 
 #lightbox #lightbox-items #text {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   padding-bottom: 20px;
   text-align: center;
 }
