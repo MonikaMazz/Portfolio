@@ -9,6 +9,9 @@ $(document).ready(function () {
         let positionTop = Math.random() * 100; // position top
         let positionLeft = Math.random() * 90; // position left
         let circleSize = parseInt(1 + Math.random() * 100); // size
+        let circlecolorR = parseInt(Math.random() * 255);
+        let circlecolorG = parseInt(Math.random() * 255);
+        let circlecolorB = parseInt(Math.random() * 255);
         let circleOpacity = 0.1 + Math.random() * 0.4; // opacity
         let circle = document.createElement('div');
         // setting className - defined in css
@@ -18,7 +21,8 @@ $(document).ready(function () {
         circle.style.top = positionTop + "vh";
         circle.style.width = circleSize + "px";
         circle.style.height = circleSize + "px";
-        circle.style.opacity = circleOpacity;
+        circle.style.background = `rgba(${circlecolorR},${circlecolorG},${circlecolorB},${circleOpacity})`;
+
         // append child to div with id lead
         lead.appendChild(circle);
     };
