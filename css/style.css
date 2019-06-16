@@ -125,6 +125,7 @@ nav #navbar ul li:hover {
   height: 80vh;
   padding-top: 100px;
   color: rgb(165, 178, 190);
+  z-index: 50;
 }
 
 #lead .lead_description h1 {
@@ -166,7 +167,8 @@ nav #navbar ul li:hover {
 .circle {
   width: 100px;
   height: 100px;
-  background-color: rgba(100, 100, 100, 0.5);
+  /* background-color: rgba(100, 100, 100, 0.5); */
+  background-color: black;
   border-radius: 50%;
   position: absolute;
   overflow-x: hidden;

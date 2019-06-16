@@ -9,12 +9,14 @@ $(document).ready(function () {
         let positionTop = Math.random() * 100;
         let positionLeft = Math.random() * 90;
         let circleSize = parseInt(1 + Math.random() * 100);
+        let circleOpacity = 0.1 + Math.random() * 0.4;
         let circle = document.createElement('div');
         circle.className = "circle";
         circle.style.left = positionLeft + "%";
         circle.style.top = positionTop + "vh";
         circle.style.width = circleSize + "px";
         circle.style.height = circleSize + "px";
+        circle.style.opacity = circleOpacity;
         lead.appendChild(circle);
     }
 
