@@ -112,7 +112,7 @@ nav #navbar ul li:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #lead .lead_description {

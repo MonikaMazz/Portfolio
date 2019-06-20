@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     for (i = 0; i < circleNumber; i++) {
         let positionTop = Math.random() * 100; // position top
-        let positionLeft = Math.random() * 90; // position left
+        let positionRight = Math.random() * 100; // position left
         let circleSize = parseInt(1 + Math.random() * 100); // size
         let circlecolorR = parseInt(Math.random() * 255);
         let circlecolorG = parseInt(Math.random() * 255);
@@ -17,7 +17,7 @@ $(document).ready(function () {
         // setting className - defined in css
         circle.className = "circle";
         // setting position, width, height and colors
-        circle.style.left = positionLeft + "%";
+        circle.style.right = positionRight + "%";
         circle.style.top = positionTop + "vh";
         circle.style.width = circleSize + "px";
         circle.style.height = circleSize + "px";
