@@ -16,6 +16,15 @@
   }
 }
 
+@keyframes animation-bottom {
+  0% {
+    transform: translateY(400%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -170,11 +179,11 @@ nav #navbar ul li:hover {
 .circle {
   width: 100px;
   height: 100px;
-  /* background-color: rgba(100, 100, 100, 0.5); */
   background-color: black;
   border-radius: 50%;
   position: absolute;
   overflow-x: hidden;
+  animation: animation-bottom 1s linear;
 }
 
 #about {
