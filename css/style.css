@@ -206,8 +206,9 @@ nav #navbar ul li:hover {
   border-radius: 50%;
   position: absolute;
   overflow-x: hidden;
-  animation: animation-bottom 1s infinite linear;
+  animation: animation-bottom 5s infinite linear;
 }
+
 
 #about {
   width: 100%;
