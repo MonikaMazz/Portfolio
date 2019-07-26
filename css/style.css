@@ -18,11 +18,34 @@
 
 @keyframes animation-bottom {
   0% {
-    transform: translateY(400%);
+    transform: translate(100%, 200%);
   }
+
+  16% {
+    transform: translate(200%, 100%);
+  }
+
+  33% {
+    transform: translate(200%, 0%);
+  }
+
+  50% {
+    transform: translate(100%, -100%);
+  }
+
+  66% {
+    transform: translate(0%, 0%);
+  }
+
+  83% {
+    transform: translate(0%, 100%);
+  }
+
   100% {
-    transform: translateY(0%);
+    transform: translate(100%, 200%);
   }
+
+
 }
 
 * {
@@ -183,7 +206,7 @@ nav #navbar ul li:hover {
   border-radius: 50%;
   position: absolute;
   overflow-x: hidden;
-  animation: animation-bottom 1s linear;
+  animation: animation-bottom 1s infinite linear;
 }
 
 #about {
