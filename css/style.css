@@ -178,11 +178,11 @@ nav #navbar ul li:hover {
   height: 80px;
   box-sizing: border-box;
   box-shadow: 3px 3px 3px #797979;
-  background-color: #10486994;
+  background-color: transparent;
   transition: 1000ms;
-  border: 0;
-  border-radius: 15px;
-  color: white;
+  border: 2px solid #10486994;;
+  border-radius: 30px;
+  color: #10486994;
   font-size: 35px;
   margin-top: 20px;
   padding: 10px;
@@ -191,12 +191,16 @@ nav #navbar ul li:hover {
 
 #lead div button a {
   text-decoration: none;
-  color: white;
+  color: #10486994;
 }
 #lead div button:hover {
   background-color: #0a2e42af;
-  font-size: 40px;
+  font-size: 38px;
   transition: 1000ms;
+}
+
+#lead div button:hover a {
+  color: white;
 }
 
 .circle {
@@ -299,16 +303,34 @@ nav #navbar ul li:hover {
   margin: 0 auto;
 }
 
+#technologies .technology {
+  width: 200px;
+  background-color: white;
+  border: 1px solid #bbb;
+  color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+#technologies .technology p {
+  font-size: 14px;
+}
+
 #technologies .icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-#technologies .icons img {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
+#technologies .icons .technology img {
+  width: 70px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 #projects {
