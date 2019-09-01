@@ -197,6 +197,7 @@ nav #navbar ul li:hover {
   background-color: #0a2e42af;
   font-size: 38px;
   transition: 1000ms;
+  cursor: pointer;
 }
 
 #lead div button:hover a {
