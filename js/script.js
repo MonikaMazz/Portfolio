@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     for (i = 0; i < circleNumber; i++) {
         let positionTop = Math.random() * 100; // position top
-        let positionRight = Math.random() * 100; // position left
+        let positionRight = 15 + Math.random() * 85 // position left
         let circleSize = parseInt(1 + Math.random() * 100); // size
         let circlecolorR = parseInt(Math.random() * 255);
         let circlecolorG = parseInt(Math.random() * 255);
