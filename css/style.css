@@ -402,6 +402,8 @@ nav #navbar ul li:hover {
 
 #lightbox #lightbox-items img {
   width: 100%;
+  padding-bottom: 20px;
+  background-color: white;
   max-height: 600px;
 }
 
